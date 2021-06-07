@@ -19,10 +19,7 @@
     "ws": "^7.4.6"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
+ 
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sureshtechi/Quiz_App-Codes.git"
