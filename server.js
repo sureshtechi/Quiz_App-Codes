@@ -137,7 +137,7 @@ app.post('/login_user', urlencodedParser,function (req, res) {
 
 app.get('/table1',urlencodedParser,function (req, res) {
 
-  var user = req.params.user ;
+  var user = req.param('user');
    
 
   console.log("user in table 1 = "+user) ;
