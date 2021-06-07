@@ -8,7 +8,7 @@ var fs = require('fs');
 var connection = mysql.createConnection({
   host: "127.0.0.1",
   user: "root",
-  password: "poweradapter",
+  password: "",
   database: "quiz_app",
   port:"3306"
 });
