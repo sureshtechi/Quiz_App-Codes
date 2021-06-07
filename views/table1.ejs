@@ -1,0 +1,63 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head></head>
+
+<meta charset="UTF-8">
+
+<style>
+	*{
+    background-color:pink;
+    font-family:'Trebuchet MS', Arial, sans-serif;
+    text-align: center;
+
+}
+
+</style>
+
+<body> 
+
+	
+
+
+
+
+	<table>
+		<caption>LIST OF ATTENDED QUIZES</caption>
+		
+	   
+			<thead>
+				<tr>
+					<th scope="col" id="name" name="name" >QUIZ_ID</th>
+					<th scope="col" id="password" name="password">MARK</th>
+					
+				  </tr>
+			</thead>
+			<tbody>
+				<% for(var i = 0; i < len; i++) { %>
+				
+				<tr>
+				  <th scope="row" name="name" id="name"><%= contacts[i].quiz_id %></th> 
+				  <th scope="row" name="password" id="password"><%= contacts[i].marks %></th> 
+				</tr> 
+
+				
+	  
+			  </tbody>
+			<% } %>
+		  
+		<tfoot>
+		  <tr>
+			<td colspan="3">Data is updated everytime after refreshing.</td>
+		  </tr>
+		</tfoot>
+	  
+	  </table>
+</body>
+  
+
+
+</html>
+ 

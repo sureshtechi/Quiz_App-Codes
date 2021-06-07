@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quiz App</title>
+        <link rel="stylesheet" href="../public/css/feedbackpage.css" />
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    </head>
+    <body>
+        <div class="quiz_box" id="questionScreen">
+            <header class="header">
+                <div class="leftSide">
+                    <img src="../public/images/quizapplogo.jpeg" alt="quiz logo" class="tilt"/>
+                </div>
+                <div class="title">Your Feedback</div>
+                <div class="time_line"></div>
+            </header>
+            <div class="QandW">
+                <div class="quizID">
+                    <label>QUIZ - ID: </label>
+                    <label id="curr_quizid"></label></div>
+            </div>
+            <div class="confirm_msg">
+                <p>You have completed this quiz. Your confirmation information is below.</p>
+            </div>
+            <div class="feedback_box">
+
+                <label>Username :</label>
+                <span id="submission_rem"><%=username%></span> 
+
+                <label>Quiz ID :</label>
+                <span id="coursename"><%=quiz_id%></span> 
+
+                <label>Your marks :</label>
+                <span id="creator"><%=marks%></span>
+
+                <label>Submitted on :</label>
+                <span id="submitted_on"><%=cur_time%></span>
+
+            </div>
+            <div class="footer">
+            <div >
+                <button id="redirect_to_home_btn">
+                    <p id="go_to_home_btn">Continue to Home</p>
+                </button>  
+            </div>  
+            </div>
+
+        </div>
+    </body>
+    <script src="../public/js/jquery-3.5.1.min.js"></script>
+    <script src="../public/js/tilt.min.js"></script>
+
+<script>
+    $(".tilt").tilt({
+        scale:1.2,
+    });
+    </script>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head >
+    <link rel="stylesheet" href="../public/css/style.css" type="text/css">
+    <title>QUIZ APP</title>
+    <body>
+        <div class="page">
+            <div class="container">
+              <div class="left">
+                <div class="login">SIGN UP</div>
+                <div class="eula"><img src="../public/images/new.png" height="250px" width="250px"></div>
+              </div>
+              <div class="right">
+                
+                    <form action="http://localhost:8081/create_account" method="POST" class="container">
+                        <div class="form">
+                        <label for="n1"><b>NAME:</b></label>
+                        <input type="text" name="n1" required>     
+                        <label for="user1"><b>USERNAME:</b></label>
+                        <input type="text" name="user1" required>
+                        <label for="psw1"><b>PASSWORD:</b></label>
+                        <input type="password" name="psw1" required>
+                        <label for="psw2"><b>RE-ENTER PASSWORD:</b></label>
+                        <input type="password" name="psw2" required>
+                        <label for="univ"><b>SCHOOL OR UNIVERSITY NAME:</b></label>
+                        <input type="text" name="univ" required>
+                        <label for="roll"><b>ROLL NUMBER:</b></label>
+                        <input type="text" name="roll" required>
+                        <select id="" name="sec_q" required>
+                            <option selected>SELECT THE SECURITY QUESTION</option>
+                            <option value="Your School Name">Your School Name</option>
+                            <option value="Your First pet dog">Your First pet dog</option>
+                            <option value="Your Favourite Cricket player">Your Favourite Cricket player</option>
+                            <option value="Your Best Friend's Mobile Brand">Your Best Friend's Mobile Brand</option>
+                            <option value="Your Memorable Maths Teacher">Your Memorable Maths Teacher</option>
+                        </select>
+                        <br><br>
+                        <label for="sec_ans"><b>ENTER YOUR SECURITY ANSWER</b></label><br>
+                        <input type="text"  name="sec_ans" required>
+                        <br><br>
+                        <button type="submit" name= "bt1" class="btn" >REGISTER</button><br>
+                        </div>
+                  </form>
+                </div>
+              </div>
+        </div>
+
+    </body>
+</html>

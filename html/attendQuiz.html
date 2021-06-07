@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quiz App</title>
+        <link rel="stylesheet" href="css/stylequiz.css" />
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    </head>
+    <body>
+        <div class="quiz_box" id="questionScreen">
+            <header class="header">
+                <div class="quizID">
+                <label>QUIZ - ID: </label>
+                <label id="curr_quizid"><%=user_quizid%></label></div>
+                <div class="title">Quiz Started</div>
+                <div class="timer">
+                    <label class="time_left_txt">Time Left: </label>
+                    <label class="timer_sec">X units</label>
+                </div>
+                <div class="time_line"></div>
+            </header>
+            <div class="QandW">
+            <div > Question &nbsp;
+                <label id="attending_qst_no"><%=qno%></label>  &nbsp;of &nbsp;
+                            <label id="attending_qst_tot"><%=leg%></label>
+            </div>
+
+            <div>
+                Weightage - <label id="attending_wgt"><%=wgt%></label>
+            </div>
+            </div>
+            <div>
+                <textarea class="questionBox" id="attending_qtxt" readonly oncopy="return false" oncut="return false" onpaste="return false"><%=ques%></textarea>
+            </div>
+
+            <div id="radio_btn" class="radio_btn">
+                <!-- <input type="radio" name="test" id="attending_opt1" value=<%=opt1%>  ><%=opt1%><br>
+                <input type="radio" name="test" id="attending_opt2" value=<%=opt2%>  ><%=opt2%><br>
+                <input type="radio" name="test" id="attending_opt3" value=<%=opt3%>  ><%=opt3%><br>
+                <input type="radio" name="test" id="attending_opt4" value=<%=opt4%>  ><%=opt4%><br> -->
+
+               <span><input class="form-check-input" type="radio" name="test" id="attending_opt1_inp" value=<%=opt1%> >
+                <label class="form-check-label" id="attending_opt1" for="flexRadioDefault1"><%=opt1%></label></span> <br>
+
+                <span><input class="form-check-input" type="radio" name="test" id="attending_opt2_inp" value=<%=opt2%> >
+                <label class="form-check-label" id="attending_opt2" for="flexRadioDefault1"><%=opt2%></label></span> <br>
+
+               <span><input class="form-check-input" type="radio" name="test" id="attending_opt3_inp" value=<%=opt3%> >
+                <label class="form-check-label" id="attending_opt3" for="flexRadioDefault1"><%=opt3%></label></span> <br>
+
+               <span><input class="form-check-input" type="radio" name="test" id="attending_opt4_inp" value=<%=opt4%> >
+                <label class="form-check-label" id="attending_opt4" for="flexRadioDefault1"><%=opt4%></label></span> <br>
+
+            </div>
+            <div class="footer">
+            <div >
+                <button id="attending_next_qst_btn">
+                    <p id="attending_next_btn_to_sbt_btn">Next</p>
+                </button>  
+                <!-- <button disabled id="attending_sbt_btn" onclick="confirm_msg()" >SUBMIT</button> -->
+            </div>  
+            <div>
+                <label>Current mark - </label>
+                <label id="disp_curr_mark">0</label>
+            </div>
+            </div>
+
+        </div>
+
+        <script src="../public/js/jquery1.js"></script>
+        <script src="../public/js/user_homepagefn.js"></script>
+
+        <!-- <script>
+            function confirm_msg() 
+            {
+              confirm("Are you sure you want to submit ");
+              
+            }
+            </script> -->
+
+    </body>
+</html>

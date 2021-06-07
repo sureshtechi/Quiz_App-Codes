@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Quiz App | User</title>
+    <link rel="stylesheet" href="../public/css/user_page.css">
+    <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+   </head>
+<body>
+  <div class="row main_box">
+    
+    <div class="col-md-2">
+      <input type="checkbox" id="check">
+      <!-- <div class="btn_one">
+        <label for="check">
+          <i class="fas fa-bars"></i>
+        </label>
+      </div> -->
+      <div class="sidebar_menu">
+         <div class="logo"> 
+          <a href="#">Quiz App</a>
+            </div> 
+          <!-- <div class="btn_two">
+            <label for="check">
+              <i class="fas fa-times"></i>
+            </label>
+          </div> -->
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="#top" id="create1"><i class="fas fa-edit"></i>Create Quiz</a>
+            </li>
+            <li>
+              <a href="#attend_quiz" id="attend1"><i class="fas fa-pen"></i>Attend Quiz</a>
+            </li>
+            <li>
+              <a href="http://localhost:8081/split"><i class="fas fa-stream"></i>Track Activity</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-phone-volume"></i>Contact</a>
+            </li>
+            <li>
+              <a href="#"><i class="far fa-comments"></i>Feedback</a>
+              </li>
+            <li>
+              <a href="#"><i class="fas fa-sign-out-alt"></i>LogOut</a>
+            </li>          
+          </ul>
+        </div>
+        <div class="social_media">
+          <ul>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="container" style="margin-left: 20%; margin-top: -500px;">
+      <div class="row">
+        <div class="col-sm-6">
+          <div id="functions">
+
+            <div id="disp_err_msg">
+            </div>
+      
+                  
+          </div>
+        </div>
+        <div class="col-sm-6">
+         <div id="show_my_quiz_list">
+          <p id="user_name_disp"><%=usern%></p>
+          <button id="show_my_quiz" >SHOW MY QUIZES </button> <br> 
+
+          <input type="text" name="user" id="user_pooling_id" placeholder="Enter Quiz ID" required><br> 
+          <button type="submit" name= "login_button" id="user_pooling_btn" class="btn">SUBMIT</button><br>
+
+          <textarea id = "disp_pooling_qst">
+
+          </textarea>
+
+         </div>
+        </div>
+      </div>
+    </div> 
+
+
+    
+  </div>
+  
+  <script src="../public/js/jquery1.js"></script>
+  <script src="../public/js/user_homepagefn.js"></script>
+  <script src="../server.js"></script> 
+    
+</body>
+
+</html>

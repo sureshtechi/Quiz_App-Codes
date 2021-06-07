@@ -1,0 +1,153 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="./css/newadmin.css">
+  </head>
+  <body onload="startTime()">
+    <aside class="side-nav" id="show-side-navigation1">
+      <i class="fa fa-bars close-aside hidden-sm hidden-md hidden-lg" data-close="show-side-navigation1"></i>
+      <div class="heading">
+        <img src="./images/512.jpg" alt="">
+        <div class="info">
+          <h3><a href="#">ADMIN1</a></h3>
+          <p>Main Admin</p>
+        </div>
+      </div>
+      <ul class="categories">
+        <li><i class="fa fa-home fa-fw" aria-hidden="true"></i><a href="/dashboard">Dashboard</a>
+        <li><i class="fa fa-bolt fa-fw"></i><a href="/features">Features</a></li>
+        <li><i class="fa fa-question-circle-o fa-fw"></i><a href="#">Version_info</a></li>
+        <li><i class="fa fa-support fa-fw"></i><a href="#">Issuebox</a></li>
+    </aside>
+    <section id="contents">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <!--//if possible paste logo here-->
+         <a class="navbar-brand" href="#">my<span class="main-color">Dashboard</span></a>
+         </div>
+          <div class="collapse navbar-collapse navbar-right"  id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="#"><i data-show="show-side-navigation1" class="fa fa-bars show-side-btn"></i></a></li>
+              <li><a href="#"><i class="fa fa-sign-out"></i> Log out</a></li>
+            </ul>
+           
+          </div>
+        </div>
+      </nav>
+      <div class="welcome">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="content">
+                <h2 id="time"></h2>
+                <p id="date"></p>
+              </div>
+            </div>
+            <div class="col-md-6">
+                <div class="content">
+                  <h2>QUOTE OF THE MONTH</h2>
+                  <p>"The best preparation for tomorrow is doing your best today!"</p>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <section class='statis text-center'>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="box bg-primary">
+                <i class="fa fa-eye"></i>
+                <h3><%=num%></h3>
+                <a href="/active"><p class="lead">Active quiz</p></a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="box success">
+                <i class="fa fa-question-circle-o"></i>
+                <h3><%=nums%></h3>
+                <a href="activequiz.html"><p class="lead">Quiz conducted</p></a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="box pik">
+                <i class="fa fa-user-o"></i>
+                <h3>10</h3>
+                <a href="activequiz.html"><p class="lead">Visitors</p></a>
+              </div>
+            </div>
+            
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="admins">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="box">
+                <h3>Admins And Moderators</h3>
+                <div class="admin">
+                  <div class="img">
+                    <img class="img-responsive" src="./images/512.jpg" alt="admin">
+                  </div>
+                  <div class="info">
+                    <h3>ADMIN 2</h3>
+                    <p>DATABASE ADMIN</p>
+                  </div>
+                </div>
+                <div class="admin">
+                  <div class="img">
+                    <img class="img-responsive" src="./images/512.jpg" alt="admin">
+                  </div>
+                  <div class="info">
+                    <h3>ADMIN 3</h3>
+                    <p>NETWORK ADMIN</p>
+                  </div>
+                </div>
+                <div class="admin">
+                  <div class="img">
+                    <img class="img-responsive" src="./images/512.jpg" alt="admin">
+                  </div>
+                  <div class="info">
+                    <h3>ADMIN 4</h3>
+                    <p>SUPPORT ADMIN</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        </section>
+       
+      </section>
+      <script src='http://code.jquery.com/jquery-latest.js'></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js"></script>
+      <script src='./admin.js'></script>
+      <script>
+      var today = new Date();
+      var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+      document.getElementById("date").innerHTML= date;
+      function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('time').innerHTML =h + ":" + m + ":" + s;
+        var t = setTimeout(startTime, 500);}
+        function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;}
+      </script>
+  
+      </body>
+
+      
+    </html>

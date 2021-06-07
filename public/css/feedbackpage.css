@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Lato", sans-serif;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+
+.quiz_box{
+    background-color: #fff;
+    border-radius: 0px;
+    margin: 0px 0px 0px 0px;
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.2);
+    min-height: 660px;
+    width: 1360px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+.quiz_box .header{
+    padding-bottom: 10px;
+}
+.quiz_box .leftSide img {
+    height: 60px;
+    width: 60px;
+}
+.quiz_box .leftSide img:hover {
+    cursor: pointer;
+}
+.title{
+    color: #464646;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    margin-top: 15px;
+    font-size: 26px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.header{
+    border-bottom: 1px solid #464646;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.feedback_box{
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-row-gap: 25px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.feedback_box *:nth-child(odd) {
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 0px;
+    background-color: #dee1e6;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    cursor: pointer;
+
+}
+.feedback_box *:nth-child(even) {
+    text-align: right;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 0px;
+    background-color: #dee1e6;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+.QandW{
+    padding-top: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+}
+.confirm_msg p{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.footer button{
+    background-color: #1da3dd;
+    border-radius: 5px;
+    padding: 7px 15px;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+.footer button:hover{
+    background-color: #748cd7;
+    border-radius: 10px;
+    padding: 7px 15px;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 20px;
+    cursor: pointer;
+}
