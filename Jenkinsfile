@@ -1,33 +1,37 @@
-node {
-    def app
-
-    stage('Clone repository') {
-        /* Cloning the Repository to our Workspace */
-
-        checkout scm
+pipeline {
+    agent any
+    environment {
+        CI = 'true'
     }
-
-    stage('Build image') {
-        /* This builds the actual image */
-
-        app = docker.build("suresh1011/nodeapp")
-    }
-
-    stage('Test image') {
-        
-        app.inside {
-            echo "Tests passed"
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
         }
-    }
-
-    stage('Push image') {
-        /* 
-			You would need to first register with DockerHub before you can push images to your account
-		*/
-        docker.withRegistry('https://registry.hub.docker.com', 'docker-hub') {
-            app.push("${env.BUILD_NUMBER}")
-            app.push("latest")
-            } 
-                echo "Trying to Push Docker Build to DockerHub"
+        stage('Cloning Git') {
+            steps {
+                git 'https://github.com/sureshtechi/Quiz_App-Codes.git'
+            }
+        }
+        stage('Install dependencies') {
+            steps {
+                sh 'npm install'
+            }
+        }
+        stage('Jest test'){
+            steps{
+                sh 'npm run test'
+            }
+        }
+        stage('Docker image creation') {
+            steps {
+                sh '''docker login --username ashwith433 --password docker@123321
+                docker build . -t ashwith433/digital_course_file --pull=true
+                docker push ashwith433/digital_course_file
+                '''
+                echo "Completed docker image building"
+            }
+        }
     }
 }
