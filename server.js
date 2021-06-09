@@ -6,7 +6,7 @@ var http = require('http');
 var fs = require('fs');
 
 var connection = mysql.createConnection({ 
-  host: "127.0.0.1",
+  host: "localhost",
   user: "root",
   password: "poweradapter", 
   database: "quiz_app",
