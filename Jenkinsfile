@@ -16,13 +16,17 @@ pipeline {
         }
         stage('Install dependencies') {
             steps {
-               bat '''npm install'''
+                bat '''npm install'''
             }
         }
-       
+        
         stage('Docker image creation') {
-           steps {
-                echo 'Hello World'
+            steps {
+                bat '''docker login --username suresh1011 --password C274ViDd?miSZs-
+                docker build . -t suresh1011/test1 --pull=true
+                docker push suresh1011/test1
+                '''
+                echo "Completed docker image building"
             }
         }
     }
