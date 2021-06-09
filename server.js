@@ -8,9 +8,10 @@ var fs = require('fs');
 var connection = mysql.createConnection({ 
   host: "127.0.0.1",
   user: "root",
-  password: "", 
+  password: "poweradapter", 
   database: "quiz_app",
-  port:"3306"
+  port:"3306",
+  socketPath: '/Applications/MAMP/tmp/mysql/mysql.sock'
 });
 
 var app = express();
