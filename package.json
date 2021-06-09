@@ -1,7 +1,7 @@
 {
   "scripts":{
     "test": "jest --forceExit",
-    "start": "node app.js"
+    "start": "node server.js"
   },
   "name": "quiz_app-codes",
   "version": "1.0.0",
