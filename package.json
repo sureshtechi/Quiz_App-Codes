@@ -1,4 +1,8 @@
 {
+  "scripts":{
+    "test": "jest --forceExit",
+    "start": "node app.js"
+  },
   "name": "quiz_app-codes",
   "version": "1.0.0",
   "description": "dependencies",
