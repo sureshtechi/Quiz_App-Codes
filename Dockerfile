@@ -4,4 +4,4 @@ COPY package.json /api
 RUN npm install
 COPY . /api
 CMD ["npm","start"]
-EXPOSE 8081
+EXPOSE 8081 
