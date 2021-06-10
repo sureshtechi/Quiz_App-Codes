@@ -9,10 +9,11 @@
 # CMD ["npm", "start"]
 
 FROM node:16
-FROM mysql:latest
+
 WORKDIR /api
 COPY package.json /api
 RUN npm install
+FROM mysql:latest
 COPY . /api
 CMD ["npm","start"]
 EXPOSE 3000
