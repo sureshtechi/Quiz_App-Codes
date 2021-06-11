@@ -22,7 +22,7 @@ pipeline {
         
         stage('Jest test'){
             steps{
-                sh 'npm run test'
+                bat '''npm run test'''
             }
         }
         
