@@ -1,0 +1,78 @@
+
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>Dashboard</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+      <link rel="stylesheet" href="./css/newadmin.css">
+      <style> 
+        label{
+          color: rgb(58, 220, 248);
+          margin-top: 100px;
+          margin-left: 30px;
+          font-family: monospace;
+          font-size: 20px;
+        }
+        #fname{
+            width: 30%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            outline: none;
+            border: none;
+            border-bottom: 2px solid red;
+          }
+          #lol{
+            margin-left: 300px;
+            margin-top:40px;
+          }
+          </style>
+    </head>
+    <body>
+      <aside class="side-nav" id="show-side-navigation1">
+        <i class="fa fa-bars close-aside hidden-sm hidden-md hidden-lg" data-close="show-side-navigation1"></i>
+        <div class="heading">
+          <img src="./images/512.jpg" alt="">
+          <div class="info">
+            <h3><a href="#">ADMIN1</a></h3>
+            <p>Main Admin</p>
+          </div>
+        </div>
+        <ul class="categories">
+          <li><i class="fa fa-home fa-fw" aria-hidden="true"></i><a href="/dashboard">Dashboard</a>
+          <li><i class="fa fa-bolt fa-fw"></i><a href="/features">Features</a></li>
+          <li><i class="fa fa-question-circle-o fa-fw"></i><a href="#">Version_info</a></li>
+          <li><i class="fa fa-support fa-fw"></i><a href="#">Issuebox</a></li>
+      </aside>
+      <section id="contents">
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <!--//if possible paste logo here-->
+           <a class="navbar-brand" href="/dashboard">my<span class="main-color">Dashboard</span></a>
+           </div>
+            <div class="collapse navbar-collapse navbar-right"  id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <!-- <li><a href="#"><i data-show="show-side-navigation1" class="fa fa-bars show-side-btn"></i></a></li> -->
+                <li><a href="#"><i class="fa fa-sign-out"></i> Log out</a></li>
+              </ul></div></div></nav> 
+              
+              <form action="/remove">
+    
+                <label for="fname">ENTER THE USER NAME:</label>&nbsp;&nbsp;
+                <input type="text" name="conduct" id="conducter"required>
+                <br><br>
+                <button type="submit" ID="lol" >SUBMIT</button>
+              </form>
+
+             
+             
+         </section>
+        
+        <script  src='http://code.jquery.com/jquery-latest.js'></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+        <script  src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js"></script>
+        
+        </body>
+      </html>

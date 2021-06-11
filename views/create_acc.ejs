@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en"> 
+    <head >
+    <link rel="stylesheet" href="./css/style.css" type="text/css"> 
+    <title>QUIZ APP</title>
+    </head>
+
+    <body>
+      <div id="create_acc_disp_msg" name=id="create_acc_disp_msg">
+
+      </div>
+        <div class="page">
+            <div class="container">
+              <div class="left">
+                <div class="login">SIGN UP</div>
+                <div class="eula"><img src="./images/new.png" height="250px" alt="" width="250px"></div>
+              </div>
+              <div class="right">
+                
+                  
+                        <div class="form">
+                        <label for="n1"><strong>NAME:</strong>></label>
+                        <input type="text" name="cr_name" id="cr_name" required>     
+                        <label for="user1"><strong>USERNAME:</strong>></label>
+                        <input type="text" name="cr_username" id="cr_username" required>
+                        <label for="psw1"><strong>PASSWORD:</strong>></label>
+                        <input type="password" name="cr_psw1" id="cr_psw1" required>
+                        <label for="psw2"><strong>RE-ENTER PASSWORD:</strong>></label>
+                        <input type="password" name="cr_psw2" id="cr_psw2" required>
+                        <label for="univ"><strong>SCHOOL OR UNIVERSITY NAME:</strong>></label>
+                        <input type="text" name="cr_univ" id="cr_univ" required>
+                        <label for="roll"><strong>ROLL NUMBER:</strong>></label>
+                        <input type="text" name="cr_roll" id="cr_roll" required>
+                        <label for="roll"><strong>SELECT SECURITY QUESTION</strong>></label>
+                        <select id="cr_sec_q" name="cr_sec_q" required>
+                            <option value="Your School Name">Your School Name</option>
+                            <option value="Your First pet dog">Your First pet dog</option>
+                            <option value="Your Favourite Cricket player">Your Favourite Cricket player</option>
+                            <option value="Your Best Friend's Mobile Brand">Your Best Friend's Mobile Brand</option>
+                            <option value="Your Memorable Maths Teacher">Your Memorable Maths Teacher</option>
+                        </select>
+                        <br><br>
+                        <label for="sec_ans"><strong>ENTER YOUR SECURITY ANSWER</strong>></label><br>
+                        <input type="text"  name="cr_sec_ans" id="cr_sec_ans" required>
+                        <br><br>
+                        <button type="submit" name= "create_acc_bt" id="create_acc_bt" class="btn" >REGISTER</button><br>
+                        </div>
+                    
+                  
+                  
+                </div>
+              </div>
+        </div>
+        <script  src="./js/jquery1.js"></script>
+        <script  src="./js/script1.js"></script>
+    </body>
+</html>
