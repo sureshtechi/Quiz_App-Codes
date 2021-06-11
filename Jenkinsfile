@@ -20,6 +20,12 @@ pipeline {
             }
         }
         
+        stage('Jest test'){
+            steps{
+                sh 'npm run test'
+            }
+        }
+        
         stage('Docker image creation') {
             steps {
                 bat '''docker login --username suresh1011 --password C274ViDd?miSZs-
